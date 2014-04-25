@@ -1,0 +1,38 @@
+#page
+{
+	font-family:Tahoma, Geneva, sans-serif;
+	width:600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+div > ul
+{
+
+
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+div > ul > li 
+{
+	float:left;
+
+}
+div > ul > li> a
+{
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	text-decoration: none;
+	display: block;
+	width:120px;
+	background-color:#CC3333;
+
+}
+a:link
+{
+	text-decoration: none;
+}
+
+td, tr {border: 0; text-align: right;}
