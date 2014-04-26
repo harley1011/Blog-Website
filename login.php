@@ -18,7 +18,8 @@ else
 	if (isset($row['id_user']))
 	{
 		echo "<p>Welcome back " . $row['firstname'] . "</p>";
-		$_SESSION['userid'] = $row['id_user']; 
+		$_SESSION['userid'] = $row['id_user'];
+		$_SESSION['email'] = $row['email'];
 	}
 	else
 	{

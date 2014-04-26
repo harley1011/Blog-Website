@@ -1,17 +1,28 @@
+
+
 #page
 {
 	font-family:Tahoma, Geneva, sans-serif;
-	width:600px;
+	width:604px;
 	margin-left: auto;
 	margin-right: auto;
 }
+#header
+{
+	border: 2px solid #CC3333;
+	border-radius: 15px;
+	height:100px;
+}
 div > ul
 {
-
-
+border-bottom-left-radius: 10px;
+border-bottom-right-radius:10px;
+float:bottom;
 list-style-type:none;
 margin:0;
 padding:0;
+position: relative;
+top:78px;
 overflow:hidden;
 }
 div > ul > li 

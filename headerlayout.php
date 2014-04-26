@@ -10,7 +10,7 @@ session_start();
 <div id="page">
 	<div id="header">
 	<ul>
-		<li><a href="">HOME</a></li>
+		<li><a href="index.php">HOME</a></li>
 		<li><a href="login.php">LOGIN</a></li>
 		<li><a href="">PROFILE</a></li>
 		<li><a href="">SEARCH</a></li>
