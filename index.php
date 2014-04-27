@@ -8,36 +8,19 @@ if ($_SERVER['REQUEST_METHOD'] =="POST" && isset($_POST['blogpost']))
 	fwrite($file, $blogpost);
 	fclose($file);
 }
+
+
 if (isset($_SESSION['userid']))
-	require_once("forms/postform.php")
+	require_once("forms/postform.php");
+else
+	echo "<a href='login.php'>Login to post</a>";
+
 ?>
 
-<script>
-function refresh(){
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-alert("ss");
-
- xmlhttp.onreadystatechange=function()
-  {
-  	if (xmlhttp.readystate == 4 && xmlhttp.status== 200)
-  	{
-  		alert("ni");
-  		xmlDoc = xmlhttp.responseText;
-  		alert(xmlDoc);
-  	}
-  }
-xmlhttp.open("GET","getblogpost.php",true);
-xmlhttp.send();
-}
+<div id="blogpostdiv">
+</div>
+<script type="text/javascript" src="javascript/getblogposts.js">
 </script>
-<button type="button" onclick="refresh()">Refresh</p>
+
 <?php require_once("footerlayout.php");
 ?>
