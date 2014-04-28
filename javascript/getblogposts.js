@@ -1,4 +1,5 @@
 var lastArraySize = 0;
+if ( document.getElementById('usernamesearch') == null )
 setInterval(function(){refresh()}, 5000);
 refresh();
 function refresh(){

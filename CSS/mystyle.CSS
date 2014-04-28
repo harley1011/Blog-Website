@@ -45,6 +45,10 @@ div > ul > li> a
 	background-color:#CC3333;
 
 }
+div > ul > li> a:hover
+{
+	color:black;
+}
 a:link
 {
 	text-decoration: none;
