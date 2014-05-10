@@ -35,7 +35,7 @@ function applyFilter(blogposts)
 
 		while( i < blogposts.length)
 		{
-				if (blogposts[i]['email'].indexOf(document.getElementById('usernamesearch').value) == -1 || blogposts[i]['blogpost'].indexOf(document.getElementById('postsearch').value) == -1 )
+				if (blogposts[i]['email'].indexOf(document.getElementById('usernamesearch').value) == -1 || blogposts[i]['description'].indexOf(document.getElementById('postsearch').value) == -1 )
 				{
 					blogposts.splice(i,1);
 					inc = false;
@@ -69,13 +69,13 @@ function createBlogPost(blogposts)
 			node1.appendChild(paragraphNode);
 
 			paragraphNode = document.createElement("p");
-			textNode = document.createTextNode(blogposts[i]['blogpost']);
+			textNode = document.createTextNode(blogposts[i]['description']);
 			paragraphNode.appendChild(textNode);
 
 			node1.appendChild(paragraphNode);
 
 			paragraphNode = document.createElement("p");
-			textNode = document.createTextNode(blogposts[i]['timestamp']);
+			textNode = document.createTextNode(blogposts[i]['time_stamp']);
 			paragraphNode.appendChild(textNode);
 
 			node1.appendChild(paragraphNode);

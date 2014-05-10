@@ -3,10 +3,21 @@ require_once("headerlayout.php");
 
 if ($_SERVER['REQUEST_METHOD'] =="POST" && isset($_POST['blogpost']))
 {
-	$blogpost = json_encode(array('userid'=>$_SESSION['userid'], 'email'=>$_SESSION['email'], 'blogpost'=>$_POST['blogpost'], 'timestamp'=>date('Y-m-d H:i:s'))) . PHP_EOL;
-	$file = fopen("posts.txt",'a');
-	fwrite($file, $blogpost);
-	fclose($file);
+	$con=mysqli_connect("localhost:3306","root","","mynewdatabase");
+	// Check connection
+	if (mysqli_connect_errno()) {
+  		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	$userid = mysqli_real_escape_string($con, $_SESSION['userid']);
+	$email = mysqli_real_escape_string($con, $_SESSION['email']);
+	$description = mysqli_real_escape_string($con, $_POST['blogpost']);
+	$date = mysqli_real_escape_string($con, date('Y-m-d H:i:s'));
+	$sql="INSERT INTO posts (id_user, email, description, time_stamp) VALUES ('$userid', '$email', '$description', '$date')";
+	if (!mysqli_query($con,$sql)) {
+  		die('Error: ' . mysqli_error($con));
+	}
+	mysqli_close($con);
+
 }
 
 
