@@ -14,19 +14,4 @@ if (mysqli_connect_errno()) {
 	array_push($postsArray,$row);
 	}
 	echo json_encode($postsArray);
-
-
-
-
-/*$file = fopen("posts.txt",'r');
-$postsArray = array();
-$size = 0;
-while (($buffer = fgets($file)) != false)
-{
-	$temp = json_decode($buffer);
-	$postsArray[$size++] = json_decode($buffer);
-
-}*/
-
-
 ?> 

@@ -20,7 +20,7 @@ if (session_id() === "") {
 		else
 			echo '<li><a href="login.php">LOGIN</a></li>';
 		?>
-		<li><a href="">PROFILE</a></li>
+		<li><a href="profile.php">PROFILE</a></li>
 		<li><a href="search.php">SEARCH</a></li>
 		<li><a href="">USERS</a></li>
 	</ul>
